@@ -1,0 +1,32 @@
+init:
+  - appveyor version
+  - sh: echo $APPVEYOR_BUILD_WORKER_IMAGE
+  - sh: echo $APPVEYOR_BUILD_WORKER_CLOUD
+  - sh: cat /etc/os_release
+  - ps: Update-AppveyorBuild -Message "Test $env:INCLUDE_TAGS tag against $env:TEST_IMAGE @ $env:TEST_CLOUD cloud. $env:APPVEYOR_REPO_COMMIT_MESSAGE"
+
+test_script:
+  - sh: make set_stdin_flag
+  - sh: ./set_stdin_flag
+  - sh: echo $HOME
+  - sh: echo $HOME
+  - sh: echo $HOME
+  - sh: echo $HOME
+  - sh: echo $HOME
+  - sh: echo $HOME
+  - sh: echo $HOME
+  - sh: echo $HOME
+  - sh: echo $HOME
+  - sh: echo $HOME
+  - sh: echo $HOME
+  - sh: echo $HOME
+  - sh: echo $HOME
+  - sh: echo $HOME
+  - sh: echo $HOME
+  - sh: echo $HOME
+  - sh: echo $HOME
+  - sh: echo $HOME
+  - sh: echo $HOME
+  - sh: echo $HOME
+  
+build: off
